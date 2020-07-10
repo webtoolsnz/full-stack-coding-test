@@ -1,7 +1,7 @@
 # Webtools Laravel Coding Test
 
 - We'd expect candidates to complete this coding test within 2-4 hours.
-- Please fork the project to a private GitHub repository, and invite the reviewer to the repository when you've completed the assessment. We want to see good commit hygiene.
+- Please duplicate the project to a private GitHub repository, and invite the reviewer to the repository when you've completed the assessment. We want to see good commit hygiene.
 - Feel free to show some flair if you feel like and have the time to do so.
 
 ## Overview
