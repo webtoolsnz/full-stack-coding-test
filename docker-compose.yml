@@ -1,0 +1,37 @@
+version: '3'
+services:
+  php:
+    image: webtoolsdev/laravel-dev:7.4-fpm
+    depends_on:
+      - db
+      - catcher
+    volumes:
+      - ./:/app:delegated
+    command: "php-fpm"
+    working_dir: "/app"
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: app
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    ports:
+      - '3306:3306'
+    volumes:
+      - db-data:/var/lib/mysql
+  nginx:
+    image: nginx:latest
+    environment:
+      FASTCGI_READ_TIMEOUT: 3600s
+    ports:
+      - '8000:80'
+    volumes:
+      - ./:/app:delegated
+      - ./docker-config/nginx/templates:/etc/nginx/templates
+  catcher:
+    image: schickling/mailcatcher
+    ports:
+      - '1080:1080'
+
+volumes:
+  db-data:
