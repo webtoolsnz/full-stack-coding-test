@@ -4,6 +4,7 @@ services:
     image: webtoolsdev/laravel-dev:7.4-fpm
     depends_on:
       - db
+      - catcher
     volumes:
       - ./:/app:delegated
     command: "php-fpm"
@@ -27,6 +28,10 @@ services:
     volumes:
       - ./:/app:delegated
       - ./docker-config/nginx/templates:/etc/nginx/templates
+  catcher:
+    image: schickling/mailcatcher
+    ports:
+      - '1080:1080'
 
 volumes:
   db-data:
