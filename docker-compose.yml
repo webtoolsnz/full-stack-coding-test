@@ -21,6 +21,8 @@ services:
       - db-data:/var/lib/mysql
   nginx:
     image: nginx:latest
+    depends_on:
+      - php
     environment:
       FASTCGI_READ_TIMEOUT: 3600s
     ports:
