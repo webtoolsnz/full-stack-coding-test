@@ -17,7 +17,7 @@ class LoginTest extends TestCase
      */
     public function it_should_allow_users_to_log_in_with_correct_credentials()
     {
-        $user = factory(User::class)->create();
+        $user = User::factory()->create();
 
         $response = $this->post(
             route('login'),
@@ -35,7 +35,7 @@ class LoginTest extends TestCase
      */
     public function it_should_reject_users_from_log_in_with_invalid_credentials()
     {
-        $user = factory(User::class)->create();
+        $user = User::factory()->create();
 
         $response = $this->post(
             route('login'),
