@@ -20,7 +20,7 @@ Build a small laravel application to manage organisation's users:
 
 - Allow `ADMIN` users to search `EMPLOYEE` users.
 - Add a policy to prevent `ADMIN` users from updating and deleting other `ADMIN` users.
-- Add a policy to prevent `ADMIN` users from deleting himself.
+- Add a policy to prevent `ADMIN` users from deleting themselves.
 - Clean and quality code
 - Good code structure.
 - We love comments and documentation.  
