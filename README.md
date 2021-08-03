@@ -13,7 +13,7 @@ Build a small laravel application to manage organisation's users:
 1. `ADMIN` users should see a `EMPLOYEE` users data grid after logging in, including `ADMIN` users.
 1. `ADMIN` users can create, edit, and delete users.
 1. Create seeders to create organisations and users, including admin users.
-1. A Company CRUD for `ADMIN` users. (Search is optional)
+1. An Organisation CRUD for `ADMIN` users. (Search is optional)
 1. Write tests for the users CRUD.
 
 ## Bonus Points
